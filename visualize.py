@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from config import MODEL
 
 def plot_predictions(df, X_pred, pred_temp, pred_sound):
     """Plot predicted vs actual temperature and sound."""
@@ -11,5 +12,5 @@ def plot_predictions(df, X_pred, pred_temp, pred_sound):
     plt.legend()
     plt.xlabel("Time")
     plt.ylabel("Value")
-    plt.title("Predicted Optimal Conditions vs Time")
+    plt.title("Predicted Optimal Conditions vs Time Using %s Model" % MODEL.capitalize())
     plt.show()
