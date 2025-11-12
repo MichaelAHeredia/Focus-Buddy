@@ -54,7 +54,7 @@ def _get_model(name: str, **params):
 
 
 def train_models(
-    df: pd.DataFrame,
+    df_or_list,
     target_columns: Iterable[str] = ("temp", "sound"),
     feature_columns: Optional[Iterable[str]] = None,
     model_name: str = "ridge",
@@ -71,6 +71,12 @@ def train_models(
 
     Returns a dict mapping target_column -> fitted estimator.
     """
+    # allow passing a list of daily DataFrames; concatenate into one DF
+    if isinstance(df_or_list, (list, tuple)):
+        df = pd.concat(df_or_list, ignore_index=True)
+    else:
+        df = df_or_list
+
     if model_params is None:
         model_params = {}
 
