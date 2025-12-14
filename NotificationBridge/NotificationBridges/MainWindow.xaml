@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="NotificationBridges.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NotificationBridges"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="NotificationBridges">
+
+    <Window.SystemBackdrop>
+        <MicaBackdrop />
+    </Window.SystemBackdrop>
+
+    <Grid Width="420" Height="200">
+        <StackPanel Margin="12">
+            <TextBlock
+                Text="Notification Bridge running"
+                FontSize="18"
+                Margin="0,0,0,8" />
+
+            <TextBlock
+                Text="Forwarding notifications to http://localhost:5005/notification"
+                TextWrapping="Wrap" />
+        </StackPanel>
+    </Grid>
+</Window>
