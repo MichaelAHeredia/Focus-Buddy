@@ -1,6 +1,6 @@
 from data_handler import generate_synthetic_data, prepare_features, build_constant_focus_input
 from models import train_models, predict_from_models
-from visualize import plot_predictions
+from sensingalgorithm.initialtestingprograms.visualize import plot_predictions
 from config import MODEL, N_DAYS, SAMPLES_PER_DAY
 import pandas as pd
 
