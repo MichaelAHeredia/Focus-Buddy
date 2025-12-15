@@ -1,7 +1,7 @@
 # Focus-Buddy
 
 Focus buddy is a project designed to increase productivity through hardware and software including a windows notification sensor ("NotificationBridge" directory),
-and a arduino/sensor array coupled machine learning algorithm ("sensingalgorithm" direcotry)
+and an arduino/sensor array coupled machine learning algorithm ("sensingalgorithm" direcotry)
 
 You can run the notification_receiver.py file along with the windows app to listen to notifications.
 
